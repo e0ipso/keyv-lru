@@ -5,10 +5,10 @@
 -->
 
 <!--
-  emdaerHash:391eeb8003f47041792836af07140745
+  emdaerHash:98b8703983608b42f6f93fe600a161ba
 -->
 
-<h1 id="keyv-lru-redis-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">Keyv LRU - Redis <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
+<h1 id="keyv-lru-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">Keyv - LRU <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
 <p>This project is part of the <a href="https://www.npmjs.com/package/keyv">Keyv</a> suite.</p>
 <!-- toc -->
 <ul>
