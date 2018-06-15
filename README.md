@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:391eeb8003f47041792836af07140745
+  emdaerHash:6e0028e7e9d03a3872442c14dd5ccf5d
 -->
 
 <h1 id="keyv-lru-redis-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">Keyv LRU - Redis <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
@@ -22,7 +22,7 @@
 <li><a href="#license">License</a></li>
 </ul>
 <!-- tocstop -->
-<p><a href="https://travis-ci.org/e0ipso/keyv-lru/"><img src="https://img.shields.io/travis/e0ipso/keyv-lru.svg?style=flat-square" alt="Travis"></a> <a href="https://coveralls.io/github/e0ipso/keyv-lru/"><img src="https://img.shields.io/coveralls/github/e0ipso/keyv-lru.svg?style=flat-square" alt="Coverage"></a> <a href="https://github.com/emdaer/emdaer"><img src="https://img.shields.io/badge/📓-documented%20with%20emdaer-F06632.svg?style=flat-square" alt="Documented with emdaer"></a></p>
+<p><a href="https://travis-ci.com/e0ipso/keyv-lru/"><img src="https://img.shields.io/travis/e0ipso/keyv-lru.svg?style=flat-square" alt="Travis"></a> <a href="https://coveralls.io/github/e0ipso/keyv-lru/"><img src="https://img.shields.io/coveralls/github/e0ipso/keyv-lru.svg?style=flat-square" alt="Coverage"></a> <a href="https://github.com/emdaer/emdaer"><img src="https://img.shields.io/badge/📓-documented%20with%20emdaer-F06632.svg?style=flat-square" alt="Documented with emdaer"></a></p>
 <h2 id="installation">Installation</h2>
 <p>In order to use LRU as your store in Keyv you will need to:</p>
 <h3 id="install">Install</h3>
