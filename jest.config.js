@@ -8,11 +8,7 @@ module.exports = {
       statements: 100,
     },
   },
-  collectCoverageFrom: [
-    '<rootDir>/src/**',
-    '!<rootDir>/src/**/__snapshots__/**',
-    '!<rootDir>/src/server.js',
-  ],
+  collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/index.js'],
   testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/lib'],
 };

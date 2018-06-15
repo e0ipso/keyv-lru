@@ -8,7 +8,8 @@ const lru = require('tiny-lru');
  * An adaptor from tiny-lru to a Map API.
  */
 class KeyvLru implements MapInterface {
-  cache;
+  // @TODO: Type this in a less generic way.
+  cache: Object;
 
   constructor(
     max: number,
