@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:2a96ca2aeb12ee08aa69255d9e053eb3
+  emdaerHash:822f0a91a03b2ad9ab26ea6b2767fa06
 -->
 
 <h1 id="keyv-lru-img-align-right-src-logo-svg-alt-keyv-logo-title-keyv-logo-width-100-">Keyv - LRU <img align="right" src="./logo.svg" alt="Keyv logo" title="Keyv logo" width="100"></h1>
@@ -38,11 +38,12 @@ module. This is one of the <a href="https://github.com/dominictarr/bench-lru#res
 
 ```js
 const options = {
+  max: 1000,
   notify: false,
   ttl: 0,
   expire: 0,
 };
-const keyvLru = new KeyvLru(max, options);
+const keyvLru = new KeyvLru(options);
 ```
 <p>See <a href="https://www.npmjs.com/package/tiny-lru"><code>tiny-lru</code></a> to learn about the
 available options.</p>
