@@ -18,7 +18,7 @@
  - shields:
      - alt: 'Travis'
        image: 'travis/e0ipso/keyv-lru.svg'
-       link: 'https://travis-ci.com/e0ipso/keyv-lru/'
+       link: 'https://travis-ci.org/e0ipso/keyv-lru/'
        style: 'flat-square'
      - alt: 'Coverage'
        image: 'coveralls/github/e0ipso/keyv-lru.svg'
