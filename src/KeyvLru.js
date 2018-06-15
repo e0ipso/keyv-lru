@@ -12,14 +12,14 @@ class KeyvLru implements MapInterface {
   cache: Object;
 
   constructor(
-    max: number,
     options: {
+      max: number,
       notify?: boolean,
       ttl?: number,
       expire?: number,
-    } = {}
+    } = { max: 500 }
   ) {
-    this.cache = lru(max, options.notify, options.ttl, options.expire);
+    this.cache = lru(options.max, options.notify, options.ttl, options.expire);
   }
 
   clear(): void {

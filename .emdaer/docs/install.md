@@ -17,11 +17,12 @@ Create your Keyv object by executing:
 
 ```js
 const options = {
+  max: 1000,
   notify: false,
   ttl: 0,
   expire: 0,
 };
-const keyvLru = new KeyvLru(max, options);
+const keyvLru = new KeyvLru(options);
 ```
 
 See [`tiny-lru`](https://www.npmjs.com/package/tiny-lru) to learn about the

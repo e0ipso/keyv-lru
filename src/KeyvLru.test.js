@@ -3,7 +3,7 @@ const KeyvLru = require('./KeyvLru');
 describe('KeyvLru', () => {
   test('constructor', () => {
     expect.assertions(2);
-    const sut = new KeyvLru(1);
+    const sut = new KeyvLru();
     expect(sut.cache).not.toBeUndefined();
     expect(sut).toBeInstanceOf(KeyvLru);
   });
@@ -11,7 +11,7 @@ describe('KeyvLru', () => {
     let sut;
 
     beforeEach(() => {
-      sut = new KeyvLru(100);
+      sut = new KeyvLru({ max: 100 });
     });
 
     afterEach(() => {
