@@ -14,7 +14,7 @@
     "precommit": "lint-staged && yarn flow",
     "emdaer": "emdaer --yes && git add *.md",
     "prepush": "yarn lint && yarn flow && yarn test",
-    "prepublish": "yarn build",
+    "prepare": "yarn build",
     "flow": "flow status",
     "build": "node ./node_modules/@babel/cli/bin/babel.js src -d lib --copy-files --delete-dir-on-start",
     "prettier": "prettier --write './**/*.js' && eslint './**/*.js' --fix",
