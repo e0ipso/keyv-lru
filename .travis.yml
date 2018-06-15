@@ -21,6 +21,7 @@ jobs:
       script:
         - yarn lint
         - yarn test-ci
+        - yarn test-suite
         - yarn add --no-lockfile coveralls
         # Report coverage to coveralls.io
         - cat ./__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js

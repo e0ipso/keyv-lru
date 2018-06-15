@@ -13,4 +13,4 @@ util
 .flowconfig
 .gitignore
 flow-typed
-*.test.js
+*.testSuite.js
