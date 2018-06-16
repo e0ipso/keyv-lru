@@ -54,4 +54,16 @@ describe('KeyvLru', () => {
       expect(sut.cache).toHaveLength(0);
     });
   });
+  test('events', done => {
+    expect.assertions(2);
+    const sut = new KeyvLru({ max: 10, notify: true });
+    sut.on('change', (event, serializedCache) => {
+      expect(event).toBe('set');
+      expect(serializedCache).toBe(
+        '{"expire":0,"max":10,"notify":true,"ttl":0,"cache":{"foo":{"next":"","previous":"","value":{"bar":true}}},"expires":{},"first":"foo","last":"foo","length":1}'
+      );
+      done();
+    });
+    sut.set('foo', { bar: true });
+  });
 });
