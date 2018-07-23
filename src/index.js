@@ -1,6 +1,6 @@
 // @flow
 
 const KeyvLru = require('./KeyvLru');
-const KeyvNullManagedTtl = require('./KeyvLruManagedTtl');
+const KeyvLruManagedTtl = require('./KeyvLruManagedTtl');
 
-module.exports = { KeyvLru, KeyvNullManagedTtl };
+module.exports = { KeyvLru, KeyvLruManagedTtl };

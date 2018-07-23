@@ -10,7 +10,7 @@
   "scripts": {
     "test": "NODE_ENV=test jest --coverage",
     "test-ci": "NODE_ENV=test jest --coverage --ci --runInBand",
-    "test-suite": "ava test-suite.js",
+    "test-suite": "ava test-suite-*.js",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "precommit": "lint-staged && yarn flow",
     "emdaer": "emdaer --yes && git add *.md",
