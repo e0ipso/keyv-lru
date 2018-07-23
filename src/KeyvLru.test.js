@@ -30,7 +30,7 @@ describe('KeyvLru', () => {
       jest.spyOn(sut.cache, 'set');
       sut.set('foo', { bar: true });
       expect(sut.cache.set).toHaveBeenCalledWith('foo', { bar: true });
-      expect(sut.get('foo')).toEqual({ bar: true });
+      expect(sut.cache.get('foo')).toEqual({ bar: true });
     });
 
     test('delete', () => {

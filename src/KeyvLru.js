@@ -11,6 +11,7 @@ const EventEmitter = require('events');
 class KeyvLru extends EventEmitter implements MapInterface {
   // @TODO: Type this in a less generic way.
   cache: Object;
+  defaultTtl: ?number;
 
   constructor(
     options: {
@@ -21,7 +22,13 @@ class KeyvLru extends EventEmitter implements MapInterface {
     } = { max: 500 }
   ) {
     super();
-    this.cache = lru(options.max, options.notify, options.ttl, options.expire);
+    this.defaultTtl = options.ttl;
+    this.cache = lru(
+      options.max,
+      options.notify,
+      this.defaultTtl,
+      options.expire
+    );
     if (options.notify) {
       // This seems like a weird construct, but this is because tiny-lru passes
       // the execution of this.cache.onchange to process.nextTick. nextTick
