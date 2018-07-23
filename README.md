@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:822f0a91a03b2ad9ab26ea6b2767fa06
+  emdaerHash:3ea3f30b6525f024e106916e59129a74
 -->
 
 <h1 id="keyv-lru-img-align-right-src-logo-svg-alt-keyv-logo-title-keyv-logo-width-100-">Keyv - LRU <img align="right" src="./logo.svg" alt="Keyv logo" title="Keyv logo" width="100"></h1>
@@ -18,6 +18,7 @@
 </li>
 <li><a href="#features">Features</a></li>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#managed-ttls">Managed TTLs</a></li>
 <li><a href="#contributors">Contributors</a></li>
 <li><a href="#license">License</a></li>
 </ul>
@@ -37,6 +38,8 @@ module. This is one of the <a href="https://github.com/dominictarr/bench-lru#res
 <p>Create your Keyv object by executing:</p>
 
 ```js
+const { KeyvLru, KeyvLruManagedTtl } = require('keyv-lru');
+
 const options = {
   max: 1000,
   notify: false,
@@ -44,9 +47,20 @@ const options = {
   expire: 0,
 };
 const keyvLru = new KeyvLru(options);
+const keyvLruManagedTtl = new KeyvLruManagedTtl(options);
 ```
 <p>See <a href="https://www.npmjs.com/package/tiny-lru"><code>tiny-lru</code></a> to learn about the
 available options.</p>
+<h2 id="managed-ttls">Managed TTLs</h2>
+<p>KeyvLruManagedTtl uses a managed TTL strategy instead of timers. This is useful
+for serverless architectures. tiny-lru expires entries based on timers, that
+means that the event loop is not empty when the lambda function is finished.
+That blocks the end of the execution.</p>
+<p>This implementation will store the expiration time along with the cached data
+and it will deleter expired items upon retrieval. Alternatively there is an
+<code>evictExpired()</code> method that will evict all the expired items.</p>
+<p>Even when not using <code>tiny-lru</code>‘s built-in expiration system based on timers, we
+still benefit a lot from the LRU store.</p>
 <h2 id="contributors">Contributors</h2>
 <details>
 <summary><strong>Contributors</strong></summary><br>
