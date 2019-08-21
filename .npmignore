@@ -4,7 +4,6 @@ scratch
 src
 util
 .babelrc
-.emdaer
 .eslintrc.js
 .eslintignore
 .nvmrc
