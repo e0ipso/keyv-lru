@@ -2,6 +2,13 @@
 
 import type { MapInterface } from '../flow/types/MapInterface';
 
+export type KeyvLruOptions = {
+  max: number,
+  notify?: boolean,
+  ttl?: number,
+  expire?: number,
+};
+
 const lru = require('tiny-lru');
 const EventEmitter = require('events');
 
@@ -13,14 +20,7 @@ class KeyvLru extends EventEmitter implements MapInterface {
   cache: Object;
   defaultTtl: ?number;
 
-  constructor(
-    options: {
-      max: number,
-      notify?: boolean,
-      ttl?: number,
-      expire?: number,
-    } = { max: 500 }
-  ) {
+  constructor(options: KeyvLruOptions = { max: 500 }) {
     super();
     this.defaultTtl = options.ttl;
     this.cache = lru(
