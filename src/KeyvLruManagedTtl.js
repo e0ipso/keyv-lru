@@ -26,9 +26,10 @@ class KeyvLruManagedTtl<T> extends KeyvLru {
       max: number,
       notify?: boolean,
       ttl?: number,
+      expire?: number,
     } = { max: 500 }
   ) {
-    super();
+    super(options);
     this.cache = lru(options.max, options.notify);
   }
 
