@@ -1,6 +1,7 @@
 // @flow
 
 import type { ExpirableItem } from '../flow/types/ExpirableItem';
+import type { KeyvLruOptions } from './KeyvLru';
 
 const lru = require('tiny-lru');
 const KeyvLru = require('./KeyvLru');
@@ -21,14 +22,7 @@ class KeyvLruManagedTtl<T> extends KeyvLru {
   cache: Object;
   defaultTtl: ?number;
 
-  constructor(
-    options: {
-      max: number,
-      notify?: boolean,
-      ttl?: number,
-      expire?: number,
-    } = { max: 500 }
-  ) {
+  constructor(options: KeyvLruOptions = { max: 500 }) {
     super(options);
     this.cache = lru(options.max, options.notify);
   }
