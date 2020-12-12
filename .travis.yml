@@ -9,7 +9,7 @@ before_install:
   - git fetch --tags
 install: npm install
 
-node_js: 'lts/carbon'
+node_js: 'lts/fermium'
 stages:
   - name: test
     # require the event type to not be a semantic release tag.
